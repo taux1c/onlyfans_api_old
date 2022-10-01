@@ -14,6 +14,9 @@ class Profile:
         self.auth = cogs.auth.Auth(auth_file)
         self.config = cogs.config.Config(config_file)
         self.messages = []
+        self.archived_messages = []
+        self.typed_usernames_models = []
+        self.bad_usernames = []
 
 
 

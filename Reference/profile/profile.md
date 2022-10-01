@@ -55,7 +55,7 @@ Thiese are stored as strings because in the event of a typo or deleted account, 
 This is the model objects that were able to be constructed from the typed_usernames.
 
 ###bad_typesd_usernames: list of strings
-These are the usernames that were typed but could not be constructed into a model object.
+These are the usernames that could not be constructed into a model object. This could be that the user deleted their account, was banned, username was changed / misspelled, etc.
 
 
 ###Methods
