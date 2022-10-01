@@ -8,7 +8,7 @@ class Auth:
     # auth_file expects a pathlib object to a json file.
     def __init__(self,auth_file):
         self.auth_file = auth_file
-        self.auth_details = json.load(self.auth_file.read_bytes())
+        self.auth_details = json.loads(self.auth_file.read_bytes())
         self.auth = {
             "sess" : self.auth_details["sess"],
             "auth_id" : self.auth_details["auth_id"],
