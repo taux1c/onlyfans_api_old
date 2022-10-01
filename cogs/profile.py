@@ -7,7 +7,7 @@ import cogs.config
 # If the argument is left blank it will default to all media types.
 
 class Profile:
-    def __init__(self,config_file):
+    def __init__(self,auth_file,config_file):
         self.config = cogs.config.Config(config_file)   # This is where the config file is passed to the profile class and as a result the scraper.
         self.active_subscriptions = []   # This is a list of all the active subscriptions for this profile.
         self.messaged_models = self.    # This is a list of all the models that have been messaged by this profile.
