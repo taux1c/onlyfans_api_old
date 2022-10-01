@@ -8,5 +8,12 @@ import cogs.auth
 
 class Profile:
     def __init__(self):
-        pass
+        self.active_subscriptions = []
+        self.messaged_models = []
+        self.typed_usernames = []
+        self.auth = cogs.auth.Auth(auth_file)
+        self.config = cogs.config.Config(config_file)
+        self.messages = []
+
+
 
