@@ -1,4 +1,4 @@
-import config
+import constants
 import cogs.auth
 
 
@@ -7,7 +7,7 @@ import cogs.auth
 # If the argument is left blank it will default to all media types.
 
 class Profile:
-    def __init__(self):
+    def __init__(self,config_file):
         self.active_subscriptions = []
         self.messaged_models = []
         self.typed_usernames = []

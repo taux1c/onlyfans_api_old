@@ -1,4 +1,4 @@
-import config
+import constants
 
 # This class will be used to store the models information. Including their media, profile information, and other data.
 # This is what will be passed to the scraper for downloading.

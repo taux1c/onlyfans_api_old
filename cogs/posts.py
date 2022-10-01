@@ -1,4 +1,4 @@
-import config
+import constants
 
 
 # Class used to store and handle all Post objects. Each user can have their own Posts object.

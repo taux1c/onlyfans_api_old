@@ -1,4 +1,4 @@
-import config
+import constants
 import json
 
 # Class used to store and handle onlyfans auths. This allows the scraper to handle multiple profiles at once.
