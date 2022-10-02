@@ -19,5 +19,25 @@ class Profile:
         self.typed_usernames_models = []    # This is a list of all the models that have been typed by this profile in object form if they were able to be constructed.
         self.bad_usernames = []     # This is a list of all the usernames that have been typed by this profile that were not able to be constructed into a model object.
         self.session = cogs.session.Session(self.auth)   # This is the session object that will be used to store the session data for this profile.
+        self.pause = False  # This is a boolean that will be used to pause the scraper for this profile.
+        self.stop = False   # This is a boolean that will be used to stop the scraper for this profile. This will continue any active downloads but will stop when safe to do so.
+        self.resume = False # This is a boolean that will be used to resume the scraper for this profile.
+        self.busy = False   # This is a boolean that will be used to indicate if the scraper is busy or not.
 
+    def start(self):
+        if self.stop:
+            return
+        if self.pause:
+            return "{} is paused. To resume please use the resume command.".format(self.config.username)
+
+        if self.busy:
+            return "{} is busy. Please wait until it is finished before starting it again.".format(self.config.username)
+        #This is where the scraper will be started. Remember to set self.busy to True when the scraper is started and set it to False when it is finished.
+        self.busy = True
+
+
+
+
+    def pause(self):
+        if self.busy:
 
